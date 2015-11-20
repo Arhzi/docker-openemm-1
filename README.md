@@ -30,7 +30,7 @@ Grant openemm access to its databases:
 Pull image:
 
 ```bash
-   docker pull lgibelli/openemm
+   docker pull nervous/openemm
 ```
 	
 ### Usage 
