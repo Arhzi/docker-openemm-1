@@ -45,7 +45,7 @@ Assumptions:
 * The app will be installed on a volume, to make sure that logs, spool dir are persistent.
 
 ```bash
-   docker run -p 8081:8081 -v /home/openemm:/home/openemm \
+   docker run -p 8080:8080 -v /home/openemm:/home/openemm \
       -e OPENEMM_HOST=myemmhostname -e OPENEMM_PORT=8080 \
       -e MYSQL_USER=openemm_docker -e MYSQL_PASS=yourpass -e MYSQL_HOST=172.17.42.1 -e MYSQL_DB=openemm_docker \
       -e SMTP_HOST=smtp-relay-hostname \
