@@ -17,7 +17,6 @@ if ! [ -f /home/openemm/.CONFIGURED ]; then
 	mkdir -p /home/openemm
 	cp -a /home/openemm-orig/. /home/openemm/.
 	/setup-openemm.sh
-	touch /var/log/maillog && chown openemm /var/log/maillog
 	chown -R openemm /home/openemm
 	touch .CONFIGURED
 fi
@@ -28,6 +27,8 @@ for ADDRESS in $MAIL_ADDRESSES; do
 	echo "${ADDRESS}@${OPENEMM_HOST} alias:ext_${COUNTER}@${OPENEMM_HOST}" >> /home/openemm/conf/bav/bav.conf-local
 	COUNTER=$[$COUNTER+1]
 done
+
+touch /var/log/maillog && chown openemm /var/log/maillog
 
 echo Starting OpenEMM...
 

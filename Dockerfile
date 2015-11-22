@@ -22,5 +22,5 @@ RUN mv USR_SHARE/* /usr/share/doc/OpenEMM-2015 && rm -r USR_SHARE
 ADD run.sh /run.sh
 ADD setup-openemm.sh /setup-openemm.sh
 
-EXPOSE 8081
+EXPOSE 8080
 CMD ["/run.sh"]

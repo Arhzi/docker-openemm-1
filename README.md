@@ -49,7 +49,7 @@ Assumptions:
       -e OPENEMM_HOST=myemmhostname -e OPENEMM_PORT=8080 \
       -e MYSQL_USER=openemm_docker -e MYSQL_PASS=yourpass -e MYSQL_HOST=172.17.42.1 -e MYSQL_DB=openemm_docker \
       -e SMTP_HOST=smtp-relay-hostname \
-      --name openemm --restart=always openemm
+      --name openemm -d --restart=always openemm
 ```
 
 ### DEBUGGING
